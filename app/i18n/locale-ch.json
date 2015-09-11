@@ -1,0 +1,40 @@
+{
+  "HEADER": {
+    "TITLE": "加入時間",
+    "MENU": "百六入時",
+    "SETTINGS_DROPDOWN": {
+      "LABEL_NAME": "幾點想法",
+      "LANGS": {
+        "EN": "EN",
+        "AR": "ول إلى",
+        "CH": "百六"
+      }
+    }
+  },
+  "BUTTONS": {
+    "SWITCH_STYLES_CLIENT": "入時六",
+    "SWITCH_STYLES_DEFAULT": "百六入時"
+  },
+  "MODULES": {
+    "HOME": {
+      "TITLE": "入時六"
+    },
+    "LOGIN": {
+      "TITLE": "百六",
+      "FORM": {
+        "USERNAME": "入時六",
+        "PASSWORD": "百六入時"
+      }
+    },
+    "LOGOUT": {
+      "TITLE": "幾點想"
+    }
+  },
+  "ERRORS": {
+    "404": "幾點想法"
+  },
+  "MESSAGES": {
+    "LOGGEDIN": "幾點想法幾點想法",
+    "LOGGEDOUT": "入時六"
+  }
+}

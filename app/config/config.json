@@ -1,0 +1,14 @@
+{
+  "branding": {
+    "directory": "/branding"
+  },
+  "lang": {
+    "1": "en",
+    "2": "ar",
+    "3": "ch"
+  },
+  "topBar": {
+    "visibility": true,
+    "dropDown": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "HEADER": {
+    "TITLE": "تسجيل الدخول",
+    "MENU": "داري",
+    "SETTINGS_DROPDOWN": {
+      "LABEL_NAME": "ول إلى",
+      "LANGS": {
+        "EN": "EN",
+        "AR": "ول إلى",
+        "CH": "百六"
+      }
+    }
+  },
+  "BUTTONS": {
+    "SWITCH_STYLES_CLIENT": "دارين",
+    "SWITCH_STYLES_DEFAULT": "إلى ري"
+  },
+  "MODULES": {
+    "HOME": {
+      "TITLE": "دارين"
+    },
+    "LOGIN": {
+      "TITLE": "رينإلى ",
+      "FORM": {
+        "USERNAME": "دارين",
+        "PASSWORD": "الدخول"
+      }
+    },
+    "LOGOUT": {
+      "TITLE": "إلى"
+    }
+  },
+  "ERRORS": {
+    "404": "تسجيل الدخول"
+  },
+  "MESSAGES": {
+    "LOGGEDIN": "إلى",
+    "LOGGEDOUT": "تسجيل الدخول"
+  }
+}

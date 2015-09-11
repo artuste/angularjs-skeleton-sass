@@ -1,0 +1,56 @@
+@import "login";
+
+.container-header {
+  padding: 0px 14px;
+  background-color: #F8F7F7;
+  .title {
+    margin: 10px 0;
+    .logo {
+      width: 30px;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+.app-top-content {
+  text-align: right;
+  line-height: 50px;
+}
+
+.panel-full-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.client-style {
+  @import "../public/branding/client-style";
+}
+
+.lang {
+  &.lang-ar {
+    @import "bootstrap-rtl";
+
+    & > * {
+      direction: rtl;
+    }
+    input {
+      float: left;
+    }
+    .app-top-content {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .app-top-content {
+    .btn, .btn-group {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="skeleton" ng-cloak>
+<head>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Template">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AngularJS Skeleton</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="/public/bower_components/angular-toastr/dist/angular-toastr.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <!-- endbuild -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="lang lang-{{language}}" ng-class="{ 'client-style' : clientStyleEnable }">
+
+<div ui-view></div>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/public/bower_components/jquery/dist/jquery.js"></script>
+<script src="/public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/public/bower_components/angular/angular.js"></script>
+<script src="/public/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/public/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="/public/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/public/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/public/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/public/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="/public/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="/public/bower_components/angular-translate/angular-translate.js"></script>
+<script src="/public/bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+<script src="/public/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="/public/bower_components/angular-rollbar/angular-rollbar.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- inject:js -->
+<script src="modules/app.module.js"></script>
+<script src="modules/authentication/authentication.module.js"></script>
+<script src="modules/core/core.module.js"></script>
+<script src="modules/home/home.module.js"></script>
+<script src="modules/login/login.module.js"></script>
+<script src="modules/app.config.js"></script>
+<script src="modules/authentication/authentication.service.js"></script>
+<script src="modules/authentication/webStorage.service.js"></script>
+<script src="modules/core/config.js"></script>
+<script src="modules/core/constants.js"></script>
+<script src="modules/core/errors.js"></script>
+<script src="modules/core/run.js"></script>
+<script src="modules/home/home.config.js"></script>
+<script src="modules/home/home.js"></script>
+<script src="modules/home/home.service.js"></script>
+<script src="modules/login/login.config.js"></script>
+<script src="modules/login/login.js"></script>
+<script src="modules/login/logout.js"></script>
+<script src="modules/blocks/logger/logger.js"></script>
+<script src="modules/components/com-languages/comLanguages.directive.js"></script>
+<script src="modules/components/com-languages/comLanguages.js"></script>
+<script src="modules/components/com-main/comMain.directive.js"></script>
+<script src="modules/components/com-main/comMain.service.js"></script>
+<script src="modules/components/com-menu/comMenu.directive.js"></script>
+<script src="modules/components/com-menu/comMenu.service.js"></script>
+<script src="modules/components/com-switcher/comSwitcher.directive.js"></script>
+<script src="modules/components/com-topbar/comTopbar.directive.js"></script>
+<!-- endinject -->
+
+</body>
+</html>

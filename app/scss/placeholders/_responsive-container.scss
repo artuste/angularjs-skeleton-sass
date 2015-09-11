@@ -1,0 +1,10 @@
+%resp-container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 30px;
+    @include bp(large, medium, small) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

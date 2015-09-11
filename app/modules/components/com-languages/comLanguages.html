@@ -1,0 +1,18 @@
+<div class="btn-group"
+     ng-if="config.topBar.dropDown"
+     ng-controller="comLanguagesCtrl">
+    <button type="button" data-toggle="dropdown"
+            class="btn btn-default dropdown-toggle">
+        <i class="glyphicon glyphicon-transfer"></i>
+        {{ 'HEADER.SETTINGS_DROPDOWN.LABEL_NAME' | translate }}
+        <span class="caret"></span></button>
+
+    <ul class="dropdown-menu">
+        <li ng-repeat="item in config.lang">
+            <a href="#" ng-click="changeLanguage(item)">
+                <i ng-if="lang === item" class="glyphicon glyphicon-ok"></i>
+                {{ 'HEADER.SETTINGS_DROPDOWN.LANGS.' + item | uppercase | translate }}
+            </a>
+        </li>
+    </ul>
+</div>

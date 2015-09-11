@@ -1,0 +1,109 @@
+.error-messages {
+    background-color: #F1DFE1;
+    border: 1px solid #E2AAB0;
+    border-radius: $border-radius;
+    color: #CF1F35;
+    font-family: $font-primary;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+form {
+    font-family: $font-primary;
+    line-height: 20px;
+
+    * + br + label + *,
+    * + br + p {
+        margin-top: 20px !important;
+    }
+
+    fieldset,
+    p {
+        @extend %fluid-grid;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    input,
+    label {
+        line-height: 100%;
+        vertical-align: baseline !important;
+    }
+
+    input {
+        background-color: $gray-20;
+        border: 1px solid transparent;
+        border-radius: $border-radius;
+        color: $blue-dark;
+        font-family: $font-primary;
+        font-size: 16px;
+        margin-right: 130px;
+        padding: 10px;
+        width: calc(100% - 20% - 130px);
+
+        &:active {
+            border: 1px solid $gray-40;
+        }
+    }
+
+    label {
+        color: $gray-90;
+        font-size: 16px;
+        font-weight: bold;
+        padding-right: 30px;
+        position: relative;
+        text-align: right !important;
+        width: 20%;
+
+        &[required]:after {
+            color: $red;
+            content: '*';
+            position: absolute;
+            margin-left: 6px;
+        }
+    }
+
+    button {
+        background-color: $blue-light;
+        border: none;
+        border-radius: $border-radius;
+        color: $white;
+        cursor: pointer;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .select2-arrow:before {
+        color: $white;
+        content: $arrow-down-value;
+        font-family: Icons;
+        left: 50%;
+        margin: -8px 0 0 -10px;
+        position: absolute;
+        top: 50%;
+    }
+    fieldset.login-border {
+        border: 1px groove #ddd !important;
+        padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+        box-shadow:  0px 0px 0px 0px #000;
+    }
+
+    legend.login-border {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width:auto;
+        padding: 0 12px 0 2px;
+        border-bottom: none;
+        margin: 0 0 32px 0;
+    }
+
+}

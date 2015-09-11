@@ -1,0 +1,23 @@
+<h4>{{ 'MODULES.HOME.TITLE' | translate }}</h4>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div ng-switch="language">
+                    <p class="bs-example">
+                        <button class="btn btn-success" ng-click="vm.getSuccessRequest()">
+                            Success request
+                        </button>
+                        <button class="btn btn-danger" ng-click="vm.getBadRequest()">
+                            Bad request
+                        </button>
+                    </p>
+
+                    <div ng-if="vm.books.length === 0" class="alert alert-warning">No data</div>
+                    <pre ng-if="vm.books.length > 0">{{ vm.books | json }}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+@mixin button($color, $hover-color, $text-color: #fff) {
+    background: $color;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: $text-color;
+    cursor: pointer;
+    font: 700 16px/20px $font-primary;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+    white-space: nowrap;
+    @include bp(medium, small) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    &:focus {
+        outline: 0 none;
+    }
+
+    &:hover {
+        background-color: $hover-color;
+        color: $text-color;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+        background-color: rgba($color, 0.6);
+        color: rgba($text-color, 0.6);
+        cursor: default;
+    }
+}
+
+.btn {
+    @include button($blue-light, $blue);
+}
+
+.btn-danger {
+    @include button($red, $red-dark);
+}
+
+.btn-link {
+    @include button($blue-light, $blue);
+
+    &:after {
+        content: $arrow-right-value;
+        font: 9px Icons;
+        margin-left: 10px;
+    }
+}

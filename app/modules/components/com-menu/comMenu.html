@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'HEADER.MENU' | translate }}
+    </div>
+    <div class="panel-body">
+        <p ng-repeat="(key, value) in vm.config.modulesList">
+            <a ng-if="!!value" ui-sref="main.{{ key }}">
+                {{ 'MODULES.' + key + '.TITLE' | uppercase | translate }}
+            </a>
+        </p>
+    </div>
+</div>
