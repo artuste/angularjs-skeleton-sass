@@ -14,7 +14,15 @@ This is a skeleton of AngularJS application.
 ## Running the App
 To run the app, follow these steps.
 
-`npm install`
-`bower install`
-`gulp build`
-`gulp serve`
+```
+npm install
+```
+```
+bower install
+```
+```
+gulp build
+```
+```
+gulp serve
+```
