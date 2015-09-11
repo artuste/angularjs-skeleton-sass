@@ -1,4 +1,4 @@
-# AngularJS Skeleton with Bootstrap SASS/RTL
+# AngularJS Skeleton with SASS
 
 This is a skeleton of AngularJS application.
 
