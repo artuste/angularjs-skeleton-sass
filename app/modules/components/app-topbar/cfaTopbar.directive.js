@@ -13,7 +13,7 @@
                 urlLogo: '='
             },
             controller: Controller,
-            templateUrl: 'modules/components/cfa-topbar/cfaTopbar.html'
+            templateUrl: 'modules/components/app-topbar/cfaTopbar.html'
         };
 
         Controller.$inject = ['$scope', 'URLS'];

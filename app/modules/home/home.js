@@ -9,7 +9,6 @@
     function Home(URLS, HomeData, logger) {
         var vm = this;
 
-        vm.testData = [];
         vm.getSuccessRequest = getSuccessRequest;
         vm.getBadRequest = getBadRequest;
 
@@ -19,9 +18,7 @@
         function getSuccessRequest() {
             HomeData.get(URLS.testData)
                 .then(function (response) {
-                    vm.testData = response.data;
-
-                    logger.success('Success!');
+                    logger.success('Success!', response.data);
                 });
         }
 

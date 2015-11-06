@@ -9,7 +9,7 @@
             scope: {},
             controller: Controller,
             controllerAs: 'vm',
-            templateUrl: 'modules/components/cfa-menu/cfaMenu.html'
+            templateUrl: 'modules/components/app-menu/cfaMenu.html'
         };
 
         Controller.$inject = ['cfaMenuService'];
