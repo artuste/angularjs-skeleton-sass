@@ -4,9 +4,9 @@
     angular.module('app.home')
         .controller('Home', Home);
 
-    Home.$inject = ['URLS', 'HomeData', 'logger'];
+    Home.$inject = ['_', 'URLS', 'logger', 'HomeData', 'Offline'];
 
-    function Home(URLS, HomeData, logger) {
+    function Home(_, URLS, logger, HomeData, Offline) {
         var vm = this;
 
         vm.getSuccessRequest = getSuccessRequest;

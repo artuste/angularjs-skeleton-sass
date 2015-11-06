@@ -1,9 +1,23 @@
 (function () {
     'use strict';
 
+    window.indexedDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB;
+
+    window.IDBTransaction = window.IDBTransaction ||
+        window.webkitIDBTransaction ||
+        window.msIDBTransaction;
+
+    window.IDBKeyRange = window.IDBKeyRange ||
+        window.webkitIDBKeyRange ||
+        window.msIDBKeyRange;
+
     angular
         .module('app')
         .config([
+            '$provide',
             '$stateProvider',
             '$urlRouterProvider',
             '$locationProvider',
@@ -15,11 +29,19 @@
     ////////////////
 
 
-    function config($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
+    function config($provide, $stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
         routing();
         translations();
+        offline();
 
         /////////////////
+
+        function offline() {
+            $provide.constant('indexedDB', window.indexedDB);
+            $provide.constant('_', window._);
+            $provide.constant('localStorage', window.localStorage);
+            $provide.constant('Offline', window.Offline);
+        }
 
         function routing() {
             $urlRouterProvider

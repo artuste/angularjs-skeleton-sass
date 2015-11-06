@@ -12,6 +12,8 @@
     <title>{{ 'HEADER.TITLE' | translate }}</title>
     <!-- build:css -->
     <link rel="stylesheet" href="/public/bower_components/angular-toastr/dist/angular-toastr.min.css"/>
+    <link rel="stylesheet" href="public/bower_components/offlinejs/themes/offline-theme-chrome.css" />
+    <link rel="stylesheet" href="public/bower_components/offlinejs/themes/offline-language-english.css" />
     <link rel="stylesheet" href="/css/app.css"/>
     <!-- endbuild -->
 
@@ -41,6 +43,8 @@
 <script src="/public/bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
 <script src="/public/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 <script src="/public/bower_components/angular-rollbar/angular-rollbar.js"></script>
+<script src="/public/bower_components/offlinejs/offline.min.js"></script>
+<script src="/public/bower_components/offlinejs-simulate-ui/offline-simulate-ui.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -57,11 +61,9 @@
 <script src="modules/home/home.js"></script>
 <script src="modules/home/home.service.js"></script>
 <script src="modules/blocks/logger/logger.js"></script>
-<script src="modules/components/app-main/cfaMain.directive.js"></script>
-<script src="modules/components/app-main/cfaMain.service.js"></script>
-<script src="modules/components/app-menu/cfaMenu.directive.js"></script>
-<script src="modules/components/app-menu/cfaMenu.service.js"></script>
-<script src="modules/components/app-topbar/cfaTopbar.directive.js"></script>
+<script src="modules/components/app-main/appMain.directive.js"></script>
+<script src="modules/components/app-main/appMain.service.js"></script>
+<script src="modules/components/app-topbar/appTopbar.directive.js"></script>
 <!-- endinject -->
 
 <!--edubase components-->

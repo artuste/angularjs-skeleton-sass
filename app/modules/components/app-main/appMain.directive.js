@@ -11,7 +11,7 @@
             restrict: 'EA',
             controller: Controller,
             controllerAs: 'vm',
-            templateUrl: 'modules/components/app-main/cfaMain.html'
+            templateUrl: 'modules/components/app-main/appMain.html'
         };
 
         Controller.$inject = ['$scope', '$rootScope', 'ErrorLog', '$filter', 'logger', 'CONSTANTS', 'cfaMainService'];
