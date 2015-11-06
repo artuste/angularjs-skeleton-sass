@@ -1,6 +1,6 @@
 {
-  "name": "angularjs-skeleton",
-  "version": "1.0.0",
+  "name": "BookshelfCfa",
+  "version": "0.0.1",
   "dependencies": {
     "angular": "~1.3.15",
     "angular-animate": "1.3.15",
@@ -24,10 +24,5 @@
   "devDependencies": {
     "angular-mocks": "1.3.15",
     "jasmine-jquery": "1.7.0"
-  },
-  "resolutions": {
-    "angular-route": "1.3.15",
-    "angular": "1.3.15",
-    "angular-animate": "1.3.15"
   }
 }

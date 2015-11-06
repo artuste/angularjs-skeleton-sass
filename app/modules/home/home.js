@@ -9,7 +9,7 @@
     function Home(URLS, HomeData, logger) {
         var vm = this;
 
-        vm.books = [];
+        vm.testData = [];
         vm.getSuccessRequest = getSuccessRequest;
         vm.getBadRequest = getBadRequest;
 
@@ -17,9 +17,9 @@
         /////////////////
 
         function getSuccessRequest() {
-            HomeData.get(URLS.books)
+            HomeData.get(URLS.testData)
                 .then(function (response) {
-                    vm.books = response.data.ebooks.ebook;
+                    vm.testData = response.data;
 
                     logger.success('Success!');
                 });

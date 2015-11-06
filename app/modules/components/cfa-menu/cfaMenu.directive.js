@@ -1,27 +1,27 @@
 (function () {
     'use strict';
 
-    angular.module('skeleton')
-        .directive('comMenu', comMenu);
-    function comMenu() {
+    angular.module('app')
+        .directive('cfaMenu', cfaMenu);
+    function cfaMenu() {
         return {
             restrict: 'EA',
             scope: {},
             controller: Controller,
             controllerAs: 'vm',
-            templateUrl: 'modules/components/com-menu/comMenu.html'
+            templateUrl: 'modules/components/cfa-menu/cfaMenu.html'
         };
 
-        Controller.$inject = ['comMenuService'];
+        Controller.$inject = ['cfaMenuService'];
 
 
-        function Controller(comMenuService) {
+        function Controller(cfaMenuService) {
             var vm = this;
 
             vm.config = {};
             var jsonUrl = '/config/modulesList.json';
 
-            comMenuService.getConfig(jsonUrl)
+            cfaMenuService.getConfig(jsonUrl)
                 .then(function (response) {
                     vm.config.modulesList = response.data;
                 });

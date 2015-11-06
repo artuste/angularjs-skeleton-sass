@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="skeleton" ng-cloak>
+<html ng-app="app" ng-cloak>
 <head>
     <base href="/">
 
@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AngularJS Skeleton</title>
+    <title>{{ 'HEADER.TITLE' | translate }}</title>
     <!-- build:css -->
     <link rel="stylesheet" href="/public/bower_components/angular-toastr/dist/angular-toastr.min.css"/>
     <link rel="stylesheet" href="/css/app.css"/>
@@ -46,13 +46,9 @@
 
 <!-- inject:js -->
 <script src="modules/app.module.js"></script>
-<script src="modules/authentication/authentication.module.js"></script>
 <script src="modules/core/core.module.js"></script>
 <script src="modules/home/home.module.js"></script>
-<script src="modules/login/login.module.js"></script>
 <script src="modules/app.config.js"></script>
-<script src="modules/authentication/authentication.service.js"></script>
-<script src="modules/authentication/webStorage.service.js"></script>
 <script src="modules/core/config.js"></script>
 <script src="modules/core/constants.js"></script>
 <script src="modules/core/errors.js"></script>
@@ -60,18 +56,12 @@
 <script src="modules/home/home.config.js"></script>
 <script src="modules/home/home.js"></script>
 <script src="modules/home/home.service.js"></script>
-<script src="modules/login/login.config.js"></script>
-<script src="modules/login/login.js"></script>
-<script src="modules/login/logout.js"></script>
 <script src="modules/blocks/logger/logger.js"></script>
-<script src="modules/components/com-languages/comLanguages.directive.js"></script>
-<script src="modules/components/com-languages/comLanguages.js"></script>
-<script src="modules/components/com-main/comMain.directive.js"></script>
-<script src="modules/components/com-main/comMain.service.js"></script>
-<script src="modules/components/com-menu/comMenu.directive.js"></script>
-<script src="modules/components/com-menu/comMenu.service.js"></script>
-<script src="modules/components/com-switcher/comSwitcher.directive.js"></script>
-<script src="modules/components/com-topbar/comTopbar.directive.js"></script>
+<script src="modules/components/cfa-main/cfaMain.directive.js"></script>
+<script src="modules/components/cfa-main/cfaMain.service.js"></script>
+<script src="modules/components/cfa-menu/cfaMenu.directive.js"></script>
+<script src="modules/components/cfa-menu/cfaMenu.service.js"></script>
+<script src="modules/components/cfa-topbar/cfaTopbar.directive.js"></script>
 <!-- endinject -->
 
 </body>

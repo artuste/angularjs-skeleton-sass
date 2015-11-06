@@ -1,24 +1,12 @@
 (function () {
     'use strict';
 
-    angular.module('skeleton')
+    angular.module('app')
         .factory('CONSTANTS', Constants)
         .constant('URLS', {
             base: window.location.origin,
-            login: {
-              url: window.location.origin + '/modules/authentication/mockToken.json'
-            },
-            personalization: {
-                imagesUrl: window.location.origin + '/public/branding/images/',
-                logo: {
-                    defaultImage: 'logo_default.png',
-                    clientImage: 'logo_client.png'
-                }
-            },
-            books: window.location.origin + '/config/ebooks.json',
-            vanilia: {
-                serverName: window.location.origin + '/public/vanilia-player/dist/player.html'
-            }
+            imageUrl: window.location.origin + '/public/branding/images/logo_default.png',
+            testData: window.location.origin + '/config/testData.json'
         })
         .constant('ERROR_EVENTS', {
             loginSuccess: 'auth-login-success',

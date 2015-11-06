@@ -1,33 +1,11 @@
 {
   "HEADER": {
-    "TITLE": "AngularJS Skeleton",
-    "MENU": "Menu",
-    "SETTINGS_DROPDOWN": {
-      "LABEL_NAME": "Languages",
-      "LANGS": {
-        "EN": "EN",
-        "AR": "ول إلى",
-        "CH": "百六"
-      }
-    }
-  },
-  "BUTTONS": {
-    "SWITCH_STYLES_CLIENT": "Switch to client style",
-    "SWITCH_STYLES_DEFAULT": "Switch to default style"
+    "TITLE": "Offline App",
+    "MENU": "Menu"
   },
   "MODULES": {
     "HOME": {
       "TITLE": "Home"
-    },
-    "LOGOUT": {
-      "TITLE": "Logout"
-    },
-    "LOGIN": {
-      "TITLE": "Login",
-      "FORM": {
-        "USERNAME": "Username",
-        "PASSWORD": "Password"
-      }
     }
   },
   "ERRORS": {

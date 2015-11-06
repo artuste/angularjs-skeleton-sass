@@ -1,28 +1,9 @@
-# AngularJS Skeleton with SASS
+# BookShelf CFA Application #
 
-This is a skeleton of AngularJS application.
+This is a skeleton application of DBMS CFA.
 
-## What is inside ?
-* Basic AngularJS application
-* Token authentication
-* SASS version of Bootstrap
-* Customizable general & custom CSS styles
-* Switching styles
-* English, chinese and arabic translations (i18n)
-* RTL (right-to-left) layout
+### Running ###
 
-## Running the App
-To run the app, follow these steps.
-
-```
-npm install
-```
-```
-bower install
-```
-```
-gulp build
-```
-```
-gulp serve
-```
+* npm install
+* bower install
+* gulp serve

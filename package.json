@@ -1,7 +1,7 @@
 {
   "id": "0",
-  "name": "angularjs-skeleton",
-  "version": "1.0.0",
+  "name": "BookshelfCfa",
+  "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "autoprefixer-core": "~3.1.2",

@@ -1,10 +1,10 @@
 (function(){
     'use strict';
 
-    angular.module('skeleton')
-        .directive('comTopbar', comTopbar);
+    angular.module('app')
+        .directive('cfaTopbar', cfaTopbar);
 
-    function comTopbar() {
+    function cfaTopbar() {
         return {
             restrict: 'EA',
             scope: {
@@ -13,20 +13,14 @@
                 urlLogo: '='
             },
             controller: Controller,
-            templateUrl: 'modules/components/com-topbar/comTopbar.html'
+            templateUrl: 'modules/components/cfa-topbar/cfaTopbar.html'
         };
 
         Controller.$inject = ['$scope', 'URLS'];
 
         function Controller($scope, URLS) {
             $scope.config = {};
-            $scope.imgUrl = URLS.personalization.imagesUrl + $scope.urlLogo;
-
-            $scope.$watch('urlLogo', function (newValue, oldValue) {
-                if(newValue !== oldValue) {
-                    $scope.imgUrl = URLS.personalization.imagesUrl + newValue;
-                }
-            });
+            $scope.imgUrl = URLS.imageUrl;
 
             $scope.$watch('config', function (newValue, oldValue) {
                 if(newValue !== oldValue) {

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('skeleton')
+        .module('app')
         .config([
             '$stateProvider',
             '$urlRouterProvider',
@@ -23,26 +23,12 @@
 
         function routing() {
             $urlRouterProvider
-                .otherwise('/login');
+                .otherwise('/');
 
             $stateProvider
                 .state('main', {
                     abstract: true,
-                    templateUrl: 'views/main.html',
-                    resolve: {
-                        auth: ["$q", "authentication", function ($q, authentication) {
-                            var userInfo = authentication.getUserInfo();
-                            if (userInfo) {
-                                return $q.when(userInfo);
-                            } else {
-                                return $q.reject();
-                            }
-                        }]
-                    }
-                })
-                .state('loginTemplate', {
-                    abstract: true,
-                    templateUrl: 'views/login.html'
+                    templateUrl: 'views/main.html'
                 });
 
             $locationProvider.html5Mode(true);

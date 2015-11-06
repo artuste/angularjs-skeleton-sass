@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('skeleton')
+        .module('app')
         .config(['$stateProvider', config]);
 
     function config($stateProvider) {

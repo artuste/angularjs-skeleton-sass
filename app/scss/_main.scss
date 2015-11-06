@@ -13,7 +13,7 @@
     }
   }
 }
-.app-top-content {
+.cfa-top-content {
   text-align: right;
   line-height: 50px;
 }
@@ -41,14 +41,14 @@
     input {
       float: left;
     }
-    .app-top-content {
+    .cfa-top-content {
       text-align: left;
     }
   }
 }
 
 @media (max-width: 991px) {
-  .app-top-content {
+  .cfa-top-content {
     .btn, .btn-group {
       width: 100%;
     }

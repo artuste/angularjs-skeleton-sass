@@ -22,8 +22,6 @@
         /*
          * Feature areas
          */
-        'app.authentication',
-        'app.login',
         'app.home'
     ]);
 

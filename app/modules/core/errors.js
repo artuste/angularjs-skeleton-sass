@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('skeleton')
+    angular.module('app')
         .factory('ErrorLog', ErrorLog)
         .factory('ErrorInterceptor', ErrorInterceptor);
 

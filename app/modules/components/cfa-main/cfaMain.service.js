@@ -1,12 +1,12 @@
 (function () {
     'use strict';
 
-    angular.module('skeleton')
-        .factory('comMainService', comMainService);
+    angular.module('app')
+        .factory('cfaMainService', cfaMainService);
 
-    comMainService.$inject = ['$http', 'URLS'];
+    cfaMainService.$inject = ['$http', 'URLS'];
 
-    function comMainService($http, URLS) {
+    function cfaMainService($http, URLS) {
         return {
             getConfig: getConfig
         };

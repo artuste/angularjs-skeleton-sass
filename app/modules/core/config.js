@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('skeleton')
+    angular.module('app')
         .config(['$httpProvider', '$rollbarProvider', 'toastrConfig', config]);
 
     function config($httpProvider, $rollbarProvider, toastrConfig) {
