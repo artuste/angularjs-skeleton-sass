@@ -54,7 +54,7 @@
                 name: 'codedhomes',
                 version: '1',
                 instance: null,
-                objStoreName: 'homes',
+                objectStoreName: 'homes',
                 keyName: 'id',
                 upgrade: function (e) {
                     var db = e.target.result;

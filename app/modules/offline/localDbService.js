@@ -53,9 +53,6 @@
                     },
 
                     getObjectStore: function (objectStoreName, mode) {
-                        //TODO: temporary
-                        var objectStoreName = objectStoreName || 'homes';
-
                         var mode = mode || _db.transactionTypes.readonly;
 
                         var txn = _db.instance.transaction(objectStoreName, mode);
