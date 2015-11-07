@@ -2,33 +2,46 @@
     'use strict';
 
     angular.module('app.home')
-        .controller('Home', Home);
+        .controller('homesController', homesController);
 
-    Home.$inject = ['_', 'URLS', 'logger', 'HomeData', 'Offline'];
+    homesController.$inject = ['$scope', '_', 'Offline', 'persistenceService'];
 
-    function Home(_, URLS, logger, HomeData, Offline) {
-        var vm = this;
+    function homesController($scope, _, Offline, persistenceService) {
+        $scope.showList = false;
 
-        vm.getSuccessRequest = getSuccessRequest;
-        vm.getBadRequest = getBadRequest;
+        var getData = function () {
 
-
-        /////////////////
-
-        function getSuccessRequest() {
-            HomeData.get(URLS.testData)
-                .then(function (response) {
-                    logger.success('Success!', response.data);
+            persistenceService.action.getAll().then(
+                function (homes) {
+                    $scope.homes = homes;
+                    $scope.showList = true;
+                    $scope.showEmptyListMessage = (homes.length === 0);
+                },
+                function (error) {
+                    $scope.error = error;
                 });
-        }
+        };
 
-        function getBadRequest() {
-            HomeData.get('/notExistData.json')
-                .then(function (response) {
-                }, function (error) {
-                    console.log('error', error);
+        var lazyGetData = _.debounce(getData, 50);
+
+        Offline.on('confirmed-down', lazyGetData);
+        Offline.on('confirmed-up', lazyGetData);
+
+        lazyGetData();
+
+        $scope.delete = function (index) {
+
+            var id = $scope.homes[index].id;
+
+            persistenceService.action.delete(id).then(
+                function (result) {
+                    $scope.homes.splice(index, 1);
+                },
+                function (error) {
+                    $scope.error = error;
                 });
-        }
+        };
+
     }
 
 })();

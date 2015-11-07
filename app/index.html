@@ -25,13 +25,64 @@
 </head>
 <body class="lang lang-{{language}}" ng-class="{ 'client-style' : clientStyleEnable }">
 
-<div ui-view></div>
+<section data-ng-controller="homesController" data-ng-cloak>
+    <div data-ng-hide="showList">
+        <img src="/images/loader.gif" alt="loading..." title="loading..."/>
+    </div>
+    <div class="container" data-ng-show="showList">
+        <div class="alert alert-danger" data-ng-show="error">{{error}}</div>
+        <div class="alert alert-info" data-ng-show="showEmptyListMessage">
+            <p>
+                There are no homes available to list at this time.
+                <a href="/homes/new">Perhaps you would like enter a new one?</a>
+            </p>
+        </div>
+        <div class="row home-list-item" data-ng-repeat="home in homes">
+            <div class="col-sm-4">
+                <!--<img data-ng-src="/images/homes/{{home.imageName || 'no-image-large.png'}}"-->
+                <!--class="img-responsive img-thumbnail"/>-->
+            </div>
+            <div class="col-sm-8">
+                <address>
+                    <div class="h2">{{home.streetAddress}}</div>
+                    {{home.city}}, CA {{home.zipCode}}
+                </address>
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>Price</td>
+                        <td>${{home.price|number:0}}</td>
+                    </tr>
+                    <tr>
+                        <td>Bedrooms</td>
+                        <td>{{home.bedrooms}}</td>
+                    </tr>
+                    <tr>
+                        <td>Bathrooms</td>
+                        <td>{{home.bathrooms}}</td>
+                    </tr>
+                    <tr>
+                        <td>Square Feet</td>
+                        <td>{{home.squareFeet|number:0}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="lead">{{home.notes}}</div>
+                <button class="btn btn-link" data-ng-click="delete($index)">Delete</button>
+                <a data-ng-href="/homes/edit#{{home.id}}/{{home.streetAddress.split(' ').join('-')}}"
+                   class="btn btn-default">Edit</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/public/bower_components/jquery/dist/jquery.js"></script>
 <script src="/public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/public/bower_components/angular/angular.js"></script>
+<script src="/public/bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="/public/bower_components/lodash/lodash.js"></script>
 <script src="/public/bower_components/angular-animate/angular-animate.js"></script>
 <script src="/public/bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="/public/bower_components/angular-messages/angular-messages.js"></script>
@@ -47,6 +98,8 @@
 <script src="/public/bower_components/offlinejs-simulate-ui/offline-simulate-ui.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
+<script src="/public/Math.uuid.js"></script>
+<script src="/public/respond.js"></script>
 
 <!-- inject:js -->
 <script src="modules/app.module.js"></script>
@@ -57,6 +110,14 @@
 <script src="modules/core/constants.js"></script>
 <script src="modules/core/errors.js"></script>
 <script src="modules/core/run.js"></script>
+
+<script src="modules/offline/persistenceStrategies.js"></script>
+<script src="modules/offline/persistenceService.js"></script>
+<script src="modules/offline/localDbService.js"></script>
+<script src="modules/offline/syncController.js"></script>
+<script src="modules/offline/syncService.js"></script>
+<script src="modules/offline/fakeServerService.js"></script>
+
 <script src="modules/home/home.config.js"></script>
 <script src="modules/home/home.js"></script>
 <script src="modules/home/home.service.js"></script>

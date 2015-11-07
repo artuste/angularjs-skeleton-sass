@@ -30,8 +30,11 @@
 
 
     function config($provide, $stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
-        routing();
-        translations();
+
+        //TODO: uncomment !!!!!!
+        //routing();
+        //translations();
+
         offline();
 
         /////////////////
@@ -41,6 +44,28 @@
             $provide.constant('_', window._);
             $provide.constant('localStorage', window.localStorage);
             $provide.constant('Offline', window.Offline);
+            $provide.value('nullHome', {
+                id: '',
+                insertDate: new Date(-864000000000000),
+                modifiedDate: new Date(-864000000000000)
+            });
+
+            $provide.value('dbModel', {
+                name: 'codedhomes',
+                version: '1',
+                instance: null,
+                objStoreName: 'homes',
+                keyName: 'id',
+                upgrade: function (e) {
+                    var db = e.target.result;
+
+                    if (!db.objectStoreNames.contains('homes')) {
+                        db.createObjectStore('homes', {
+                            keyPath: 'id'
+                        })
+                    }
+                }
+            });
         }
 
         function routing() {
@@ -59,7 +84,7 @@
         function translations() {
             $translateProvider
                 .useStaticFilesLoader({
-                    prefix: 'i18n/locale-',
+                    prefix: 'locale-',
                     suffix: '.json'
                 })
                 .preferredLanguage('en');

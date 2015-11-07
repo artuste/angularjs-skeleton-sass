@@ -57,7 +57,8 @@
     "require-dir": "~0.1.0",
     "serve-static": "~1.7.1",
     "tiny-lr": "~0.1.4",
-    "wiredep": "^3.0.0-beta"
+    "wiredep": "^3.0.0-beta",
+    "node-uuid": "^1.4.3"
   },
   "scripts": {
     "//": "Update hook is currently unsupported, run manually after update by executing 'npm run-script update'",

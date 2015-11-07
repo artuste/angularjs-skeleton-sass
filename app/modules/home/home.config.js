@@ -10,7 +10,6 @@
             .state('main.home', {
                 url: "/home",
                 controller: 'Home',
-                controllerAs: 'vm',
                 templateUrl: 'modules/home/home.html'
             });
     }
